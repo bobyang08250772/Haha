@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Fotogram</title>
+  </head>
+  <body onload="init()">
+    <div onclick="closeOverlay(event)" id="overlay" class="overlay d-none">
+        <div class="img-box">
+            <div class="img-box-header">
+                <span><b id="img-title">Cat</b></span>
+                <span class="material-symbols-outlined close" onclick="closeOverlay(event)">close</span>
+            </div>
+            <div class="img-box-center">
+                <img  class="showed-img" id="showed-img" src="./img/autum again.jpg" alt="">
+            </div>
+            
+            <div class="img-box-footer">
+                <div class="arrow-div" onclick="goBack()"><span class="material-symbols-outlined arrow-back">arrow_back</span></div>
+                <div>
+                    <span id="current-img">1</span>
+                    <span>/</span>
+                    <span id="total-img">12</span>
+                </div>
+                <div class="arrow-div" onclick="goForward()"><span class="material-symbols-outlined arrow-forward">arrow_forward</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <header>
+        <img src="./favicon/favicon.png" alt="" />
+        <h1>Fotogram</h1>
+      </header>
+      <main>
+        <h1>Your personal photo album</h1>
+        <ul id="img-list">
+          
+        </ul>
+        <footer>
+          <img src="./img/logo-footer.svg" alt="Logo" />
+          <div>&copy; 2025 Developer Akademie GmbH</div>
+        </footer>
+      </main>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
